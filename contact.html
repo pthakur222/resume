@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyWebPage</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="index.css">
+
+<script>
+
+function handleform(){
+  var x ={
+  name : document.getElementById("name").value,
+  email : document.getElementById("email").value,
+  message : document.getElementById("message").value,
+  }
+
+  console.log(x);
+}
+</script>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light navs">
+      <a class="navbar-brand">Priyanka Thakur</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav" id="navbarNav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+<div class="container-fluid" id="profile-container">
+<div class="jumbo"><div class="col-md-12">
+<h2><center><b>Contact</b></center></h2></div>
+</div>
+<div class="row profile-data">
+<div class="col-md-6">
+<h5><b>  Get in Touch </b></h5>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.0686631320236!2d77.64758991419951!3d12.838839521252766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6b7e9375d8fd%3A0xcba5f9e7ede37c7c!2sNAGGACHAITTANYA+LADIES+P+G!5e0!3m2!1sen!2sin!4v1528455398987" width="95%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+<table class="table table-borderless">
+  <tbody>
+    <tr>
+      <td><i class="fas fa-map-marker-alt"></i></td>
+      <td>Bangalore,India</td>
+    </tr>
+    <tr>
+      <td><i class="fas fa-envelope"></i></td>
+      <td>info@priyankathakur.in</td>
+    </tr>
+    <tr>
+      <td><i class="fas fa-phone"></i></td>
+      <td>+91-8847625894</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+<div class="col-md-6">
+<h5><b>Contact Form</b></h5>
+<div class="container">
+  <form>
+    <div class="row contact-form-rows form-input-container">
+      <i class="fas fa-user icons"></i>
+      <input type="text" class="form-input" placeholder="Full Name" id = "name">
+    </div>
+    <div class="row contact-form-rows form-input-container">
+      <i class="fas fa-envelope icons"></i>
+      <input type="email" class="form-input" placeholder="Email Address" id ="email">
+  </div>
+  <div class="row contact-form-rows form-input-container">
+    <i class="fas fa-comment icons"></i>
+    <textarea class="form-input" rows="5" placeholder="Message for me" id = "message"></textarea>
+  </div>
+  <button type="button" value="Submit" class="btn btn-secondary contact-form-rows" onclick="handleform()">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

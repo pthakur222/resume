@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyWebPage</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link rel="stylesheet" href="index.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/controller.js"></script>
+<script type="text/javascript" src="js/api.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script>
+$(function(){
+	new SJS(); // Switch is a reserved word.
+})
+</script>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light navs">
+      <a class="navbar-brand">Priyanka Thakur</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav" id="navbarNav">
+          <li class="nav-item active">
+            <a class="nav-link btn-render-template" data-page="home" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn-render-template" data-page="home" href="resume.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn-render-template" data-page="home" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+<div class="container-fluid" id="profile-container">
+<div class="jumbo">
+  <div class="col-md-4 col-xs-12" id="profile-image-container">
+  <img src="images.png" alt="Generic placeholder image" id="profile-img">
+  </div>
+  <div class="col-md-8 col-xs-12" id="profile-header">
+    <center><h2><b>Priyanka Thakur</b></h2></center>
+    <center id="profile-subheader">Full Stack Developer</center>
+    <center id="profile-links"><a href="https://www.facebook.com/priyankathakur" target="_blank"><span class="badge badge-light"><i class="fab fa-facebook-square"></i></span></a>
+    <a href="https://github.com/pthakur222" target="_blank"><span class="badge badge-light"><i class="fab fa-github"></i></span></a>
+    <a href="http://www.linkedin.com/in/priyankathakur222" target="_blank"><span class="badge badge-light"><i class="fab fa-linkedin"></i></span></a></center>
+  </div>
+</div>
+<div class="row profile-data">
+<div class="col-sm-7">
+<h5><b>  About Me </b></h5>
+<p>Full stack developer experienced in creating web applications.Worked on various levels of application development. Skilled in Express.js,React js, and Node.js.</p>
+<button type="button" class="btn btn-secondary resume"><a href="Priyanka Thakur_353197.pdf" download="Priyanka_Thakur_resume">Download Resume</a></button>
+</div>
+<div class="col-sm-5">
+<table class="table table-borderless">
+  <tbody>
+    <tr>
+      <th>Age</th>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>Residence</th>
+      <td>India</td>
+    </tr>
+    <tr>
+      <th>Address</th>
+      <td>Pathankot,Punjab</td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td>info@priyankathakur.in</td>
+    </tr>
+    <tr>
+      <th>Phone</th>
+      <td>+91-8847625894</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
