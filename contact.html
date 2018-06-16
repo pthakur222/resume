@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
 <title>MyWebPage</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="index.css">
@@ -18,10 +19,26 @@ function handleform(){
   email : document.getElementById("email").value,
   message : document.getElementById("message").value,
   }
+    console.log(x);
+    alert("before ajax");
+  $.ajax({
+            url:"mail.php", //the page containing php script
+            type: "post", //request type,
+            dataType: 'json',
+            data: x,
+            success:function(response){
+             alert(response);
+           },
+           error:function(response){
+            //   alert(JSON.stringify(response));
+           }
+           
+         });
+         alert("after ajax");
 
-  console.log(x);
 }
 </script>
+
 </head>
 
 <body>
@@ -74,18 +91,18 @@ function handleform(){
 <div class="col-md-6">
 <h5><b>Contact Form</b></h5>
 <div class="container">
-  <form>
+  <form method="GET">
     <div class="row contact-form-rows form-input-container">
       <i class="fas fa-user icons"></i>
-      <input type="text" class="form-input" placeholder="Full Name" id = "name">
+      <input type="text" class="form-input" placeholder="Full Name" id="name">
     </div>
     <div class="row contact-form-rows form-input-container">
       <i class="fas fa-envelope icons"></i>
-      <input type="email" class="form-input" placeholder="Email Address" id ="email">
+      <input type="email" class="form-input" placeholder="Email Address" id="email">
   </div>
   <div class="row contact-form-rows form-input-container">
     <i class="fas fa-comment icons"></i>
-    <textarea class="form-input" rows="5" placeholder="Message for me" id = "message"></textarea>
+    <textarea class="form-input" rows="5" placeholder="Message for me" id ="message"></textarea>
   </div>
   <button type="button" value="Submit" class="btn btn-secondary contact-form-rows" onclick="handleform()">Send Message</button>
 </form>
@@ -96,3 +113,5 @@ function handleform(){
 </div>
 </body>
 </html>
+
+
